@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
-import versionGitPlugin from '../src'
+import vitePluginNotFound from '../src'
 
 export default defineConfig({
   plugins: [
-    versionGitPlugin(),
+    vitePluginNotFound(),
   ],
 })
