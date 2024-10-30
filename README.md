@@ -24,26 +24,6 @@ A Vite plugin that focuses on generating packaging information for Git projects.
 
 Get the `version` information from `package.json`, then automatically put the version file `version.json` in your project dist folder when packaging.
 
-```json
-// package.json
-{
-  // ...
-  "name": "vite-plugin-not-found",
-  "version": "1.0.0"
-}
-```
-```json
-// dist/version.json
-{
-  "name": "vite-plugin-not-found",
-  "version": "1.0.0",
-  "branch": "(HEAD -> main, origin/main, origin/HEAD)",
-  "hash": "3e85fdd2e0aeac7685e3d20da16ff979440cbcb8",
-  "commitUser": "xkloveme (xkloveme@gmail.com)",
-  "commitContent": "chore: 更新README和package.json中的依赖信息\n更新版本\nchore: release v1.0.4",
-  "time": "2024-08-09 22:13:11"
-}
-```
 
 ## Install
 ```bash
@@ -62,11 +42,11 @@ Add plugin to your `vite.config.ts` or `vite.config.js`:
 ```ts
 // vite.config.ts
 import { defineConfig } from 'vite'
-import VersionGitPlugin from 'vite-plugin-not-found'
+import vitePluginNotFound from 'vite-plugin-not-found'
 
 export default defineConfig({
   plugins: [
-    VersionGitPlugin(),
+    vitePluginNotFound(),
   ],
 })
 
